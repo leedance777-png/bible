@@ -1,13 +1,33 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Google AI Studio App</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
-</html>
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>📖 Bible AI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>📖 Bible AI</h1>
+    </header>
 
+    <main id="chat" class="chat" aria-live="polite"></main>
+
+    <form id="chatForm" class="input-area" autocomplete="off">
+      <div class="input-wrap">
+        <input
+          id="userInput"
+          type="text"
+          placeholder="질문을 입력해 주세요... (예: 사랑에 대해 알려줘)"
+          maxlength="300"
+          aria-label="질문 입력"
+        />
+        <button id="sendButton" type="submit">전송</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
